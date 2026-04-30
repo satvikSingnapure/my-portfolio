@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satvik Singnapure | STEM Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">The Portfolio.</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" class="settings-toggle" onclick="toggleSettings()"><i class="fas fa-cog"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="about">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="highlight">Satvik Singnapure</span></h1>
+        <p class="subtitle">STEM Enthusiast</p>
+        <p class="description">
+          I am a student at <strong>The Village Middle School</strong> with a passion for robotics, CAD design, and 3D printing. 
+          Currently, I am actively involved in <strong>FTC Robotics</strong>, where I apply my coding and engineering skills to solve complex challenges.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollToSection('projects')">View My Work</button>
+          <button class="btn-secondary" onclick="scrollToSection('contact')">Get In Touch</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="mascot.png" alt="Robotic Arm Mascot" class="mascot">
+      </div>
+    </div>
+  </header>
+
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-drafting-compass"></i>
+          <h3>CAD Design</h3>
+          <p>Experience with computer-aided design software for creating 3D models and engineering parts.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-cube"></i>
+          <h3>3D Printing</h3>
+          <p>Proficient in preparing models for 3D printing and understanding additive manufacturing processes.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-python"></i>
+          <h3>Python Coding</h3>
+          <p>Intermediate level proficiency in Python, used for various automation and logic-based projects.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-robot"></i>
+          <h3>Robotics</h3>
+          <p>Hands-on experience with robot assembly, sensor integration, and competitive robotics strategy.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-section-title">Languages & Hobbies</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-language"></i>
+          <h3>Languages</h3>
+          <p>English, Hindi, Marathi, and Spanish.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-bicycle"></i>
+          <h3>Biking</h3>
+          <p>Enjoying outdoor trails and maintaining physical fitness through cycling.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-camera"></i>
+          <h3>Photography</h3>
+          <p>Capturing sports, action, nature, and wildlife through the lens.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-car"></i>
+          <h3>Cars</h3>
+          <p>Passionate about automotive engineering, design, and performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="game-embed">
+        <iframe src="space_invaders.html" width="600" height="500" style="border:none; overflow:hidden;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-usage" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">How I Used AI</h2>
+      <p class="section-intro">This portfolio was built in collaboration with <strong>Manus</strong>, an autonomous AI agent. Here's how I leveraged AI to bring this project to life:</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-magic"></i>
+          <h3>Mascot Generation</h3>
+          <p>Used AI to generate a custom 3D-rendered robotic arm mascot that perfectly fits the STEM theme.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-code"></i>
+          <h3>Code Debugging</h3>
+          <p>Collaborated with AI to identify and fix non-responsive buttons and optimize JavaScript functionality.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>Leveraged AI to implement modern design trends like frosted glass effects and responsive layouts.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Feature Expansion</h3>
+          <p>Used AI to quickly build complex features like the interactive Settings Panel and Party Mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section bg-dark">
+    <div class="container">
+      <h2 class="section-title text-white">Let's Connect</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+          <div class="contact-links">
+            <a href="mailto:satvik_singnapure@s.thevillageschool.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>satvik_singnapure@s.thevillageschool.com</span>
+            </a>
+            <a href="https://github.com/satvikSingnapure" target="_blank" class="contact-item">
+              <i class="fab fa-github"></i>
+              <span>github.com/satvikSingnapure</span>
+            </a>
+            <a href="https://bytebandits.org/" target="_blank" class="contact-item">
+              <i class="fas fa-users"></i>
+              <span>My FTC Team: Byte Bandits</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Satvik Singnapure.</p>
+    </div>
+  </footer>
+
+  <!-- Settings Panel -->
+  <div id="settings-panel" class="settings-panel">
+    <div class="settings-header">
+      <h3>Settings</h3>
+      <button class="close-settings" onclick="toggleSettings()">&times;</button>
+    </div>
+    <div class="settings-body">
+      <div class="setting-item">
+        <span>Theme</span>
+        <button id="theme-toggle" class="btn-toggle" onclick="toggleTheme()">
+          <i class="fas fa-moon"></i> Dark Mode
+        </button>
+      </div>
+      <div class="setting-item">
+        <span>Accessibility</span>
+        <button id="access-toggle" class="btn-toggle" onclick="toggleAccessibility()">
+          <i class="fas fa-eye"></i> Larger Text
+        </button>
+      </div>
+      <div class="setting-item">
+        <span>Animation Speed</span>
+        <input type="range" id="anim-speed" min="0.5" max="3" step="0.1" value="1" oninput="updateAnimSpeed(this.value)">
+      </div>
+      <div class="setting-item">
+        <span>Party Mode</span>
+        <button id="party-toggle" class="btn-party" onclick="togglePartyMode()">
+          <i class="fas fa-birthday-cake"></i> Start Party!
+        </button>
+      </div>
+      <div class="setting-item">
+        <span>Realistic Mode</span>
+        <button id="realistic-toggle" class="btn-toggle" onclick="toggleRealisticMode()">
+          <i class="fas fa-ad"></i> Enable "Realism"
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
