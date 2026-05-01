@@ -236,3 +236,88 @@ function removeCookiesAndAds() {
   clearInterval(adInterval);
   document.querySelectorAll('.cookie-banner, .popup-ad').forEach(el => el.remove());
 }
+
+// Review System Logic
+let selectedRating = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-rating i');
+  stars.forEach(star => {
+    star.addEventListener('mouseover', function() {
+      const rating = this.getAttribute('data-rating');
+      highlightStars(rating);
+    });
+    
+    star.addEventListener('mouseout', function() {
+      highlightStars(selectedRating);
+    });
+    
+    star.addEventListener('click', function() {
+      selectedRating = this.getAttribute('data-rating');
+      highlightStars(selectedRating);
+    });
+  });
+});
+
+function highlightStars(rating) {
+  const stars = document.querySelectorAll('.star-rating i');
+  stars.forEach(star => {
+    const starRating = star.getAttribute('data-rating');
+    if (starRating <= rating) {
+      star.classList.remove('far');
+      star.classList.add('fas');
+    } else {
+      star.classList.remove('fas');
+      star.classList.add('far');
+    }
+  });
+}
+
+function submitReview() {
+  const text = document.getElementById('review-text').value;
+  if (selectedRating === 0) {
+    alert('Please select a star rating!');
+    return;
+  }
+  if (!text.trim()) {
+    alert('Please write a short description!');
+    return;
+  }
+
+  // Only display reviews with 4 stars or higher
+  if (selectedRating >= 4) {
+    const list = document.getElementById('reviews-list');
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    
+    let starsHtml = '';
+    for (let i = 0; i < 5; i++) {
+      starsHtml += i < selectedRating ? '★' : '☆';
+    }
+
+    card.innerHTML = `
+      <div class="review-stars">${starsHtml}</div>
+      <p>"${text}"</p>
+      <span class="review-author">- You (New Review)</span>
+    `;
+    
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    list.prepend(card);
+    
+    setTimeout(() => {
+      card.style.transition = 'all 0.5s ease';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 10);
+    
+    alert('Thank you for your review! It has been added to the featured list.');
+  } else {
+    alert('Thank you for your feedback! (Note: Only reviews with 4+ stars are featured on the main page)');
+  }
+
+  // Reset form
+  document.getElementById('review-text').value = '';
+  selectedRating = 0;
+  highlightStars(0);
+}
